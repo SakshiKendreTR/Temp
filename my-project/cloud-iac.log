@@ -6,3 +6,22 @@
 
 2025-07-16 22:28:21,396 cloudiac.cloudiac ERROR Checking action.. init
 2025-07-16 22:28:21,412 cloudiac.initialize INFO Project created successfully
+2025-07-16 22:38:42,201 cloudiac.cloudiac ERROR Checking action.. deploy-pipeline
+2025-07-16 22:38:44,161 cloudiac ERROR Last chance exception caught.
+2025-07-16 22:38:44,161 cloudiac ERROR An error occurred (InvalidClientTokenId) when calling the GetCallerIdentity operation: The security token included in the request is invalid.
+Traceback (most recent call last):
+  File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Scripts\cloud-iac", line 60, in <module>
+    CloudIac().main()
+  File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Lib\site-packages\cloudiac\cloudiac.py", line 73, in main
+    Deploy(session).generate_iac_infrastructure(args.dryrun)
+  File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Lib\site-packages\cloudiac\deploy.py", line 40, in generate_iac_infrastructure
+    ValidateUser(self.session).validate_user_asset_id(root_config['asset_insight_id'])
+  File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Lib\site-packages\cloudiac\validate.py", line 24, in validate_user_asset_id
+    user_arn = self.session.client('sts').get_caller_identity().get('Arn')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Lib\site-packages\cloudiac\dependencies\botocore\client.py", line 357, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Lib\site-packages\cloudiac\dependencies\botocore\client.py", line 676, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (InvalidClientTokenId) when calling the GetCallerIdentity operation: The security token included in the request is invalid.
