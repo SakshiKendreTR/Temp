@@ -4,3 +4,5 @@
 2025-07-16 21:45:35,297 cloudiac.initialize INFO Quick Start Guide: https://thehub.thomsonreuters.com/docs/DOC-2601453
 2025-07-16 21:45:35,297 cloudiac.initialize INFO FAQ: https://thehub.thomsonreuters.com/docs/DOC-2603229
 
+2025-07-16 22:28:21,396 cloudiac.cloudiac ERROR Checking action.. init
+2025-07-16 22:28:21,412 cloudiac.initialize INFO Project created successfully

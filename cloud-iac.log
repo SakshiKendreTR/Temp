@@ -1,0 +1,15 @@
+2025-07-16 22:28:04,404 cloudiac.cloudiac ERROR Checking action.. init
+2025-07-16 22:28:04,404 cloudiac ERROR Last chance exception caught.
+2025-07-16 22:28:04,404 cloudiac ERROR 2
+Traceback (most recent call last):
+  File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Scripts\cloud-iac", line 60, in <module>
+    CloudIac().main()
+  File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Lib\site-packages\cloudiac\cloudiac.py", line 149, in main
+    Init().init_project()
+  File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Lib\site-packages\cloudiac\initialize.py", line 243, in init_project
+    config = self.read_in_yaml_project_seed()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Lib\site-packages\cloudiac\initialize.py", line 42, in read_in_yaml_project_seed
+    with open(self.PROJECT_SEED_FILE_NAME, 'r') as stream:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'project_seed.yaml'
