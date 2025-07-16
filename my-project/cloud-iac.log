@@ -25,3 +25,67 @@ Traceback (most recent call last):
   File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Lib\site-packages\cloudiac\dependencies\botocore\client.py", line 676, in _make_api_call
     raise error_class(parsed_response, operation_name)
 botocore.exceptions.ClientError: An error occurred (InvalidClientTokenId) when calling the GetCallerIdentity operation: The security token included in the request is invalid.
+2025-07-16 22:56:26,534 cloudiac.cloudiac ERROR Checking action.. deploy-pipeline
+2025-07-16 22:56:27,981 cloudiac ERROR Last chance exception caught.
+2025-07-16 22:56:27,981 cloudiac ERROR An error occurred (InvalidClientTokenId) when calling the GetCallerIdentity operation: The security token included in the request is invalid.
+Traceback (most recent call last):
+  File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Scripts\cloud-iac", line 60, in <module>
+    CloudIac().main()
+  File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Lib\site-packages\cloudiac\cloudiac.py", line 73, in main
+    Deploy(session).generate_iac_infrastructure(args.dryrun)
+  File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Lib\site-packages\cloudiac\deploy.py", line 40, in generate_iac_infrastructure
+    ValidateUser(self.session).validate_user_asset_id(root_config['asset_insight_id'])
+  File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Lib\site-packages\cloudiac\validate.py", line 24, in validate_user_asset_id
+    user_arn = self.session.client('sts').get_caller_identity().get('Arn')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Lib\site-packages\cloudiac\dependencies\botocore\client.py", line 357, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Lib\site-packages\cloudiac\dependencies\botocore\client.py", line 676, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (InvalidClientTokenId) when calling the GetCallerIdentity operation: The security token included in the request is invalid.
+2025-07-16 22:58:13,583 cloudiac.cloudiac ERROR Checking action.. deploy-pipeline
+2025-07-16 22:58:20,012 cloudiac.deploy WARNING ----- Please enable the 'auto_delete' option -----
+This feature automatically deletes Cloudformation stacks that have been removed from your local directory. Once you are sure that this won't cause any accidental deletion of aws resources, enable this feature by adding the following line to your root config file: 
+
+	auto_delete: true
+
+2025-07-16 22:58:25,886 cloudiac.deploy INFO DRYRUN enabled. Not deploying pipelines. Check your local folder to see the new templates
+2025-07-16 23:05:20,330 cloudiac.cloudiac ERROR Checking action.. deploy-pipeline
+2025-07-16 23:05:26,699 cloudiac.deploy WARNING ----- Please enable the 'auto_delete' option -----
+This feature automatically deletes Cloudformation stacks that have been removed from your local directory. Once you are sure that this won't cause any accidental deletion of aws resources, enable this feature by adding the following line to your root config file: 
+
+	auto_delete: true
+
+2025-07-16 23:05:32,291 cloudiac.deploy INFO Deploying IaC pipelines
+2025-07-16 23:05:34,881 cloudiac.cloudformation INFO Checking to see if the source bucket exists..
+2025-07-16 23:05:35,655 cloudiac.cloudformation INFO The source bucket defined in config/config.yaml doesn't exist.
+2025-07-16 23:05:35,655 cloudiac.cloudformation INFO Checking to see if a stack named a206296-iac-source-bucket exists...
+2025-07-16 23:05:36,630 cloudiac.cloudformation INFO Stack not found.
+2025-07-16 23:05:36,630 cloudiac.cloudformation INFO Launching a new source bucket stack with name a206296-iac-source-bucket...
+2025-07-16 23:05:37,006 cloudiac.cloudformation INFO Waiting for stack a206296-iac-source-bucket to complete ...
+2025-07-16 23:05:59,172 cloudiac.cloudformation INFO a206296-iac-source-bucket Cloudformation stack created successfully
+2025-07-16 23:05:59,172 cloudiac.cloudformation INFO Checking to see if the inventory bucket: a206296-496598440491-euw1-iac-shared-bucket exists..
+2025-07-16 23:05:59,863 cloudiac.cloudformation INFO The inventory bucket defined in config/config.yaml doesn't exist.
+2025-07-16 23:05:59,871 cloudiac.cloudformation INFO Checking to see if a stack named a206296-iac-inventory-bucket exists...
+2025-07-16 23:06:00,080 cloudiac.cloudformation INFO Stack not found.
+2025-07-16 23:06:00,080 cloudiac.cloudformation INFO Launching a new inventory bucket stack with name a206296-iac-inventory-bucket...
+2025-07-16 23:06:00,448 cloudiac.cloudformation INFO Waiting for stack a206296-iac-inventory-bucket to complete ...
+2025-07-16 23:06:22,395 cloudiac.cloudformation INFO a206296-iac-inventory-bucket Cloudformation stack created successfully
+2025-07-16 23:06:22,395 cloudiac.deploy INFO Attempting to enable data events in CloudTrail for your source bucket.
+2025-07-16 23:06:22,400 cloudiac.deploy INFO This is a step which is required for pipelines to trigger automatically.
+2025-07-16 23:06:23,524 cloudiac.deploy INFO Enabling data events for the source bucket a206296-tr-ihn-sandbox-us-east-1-source...
+2025-07-16 23:06:24,381 cloudiac.deploy INFO Data events enabled!
+2025-07-16 23:06:24,390 cloudiac.cloudformation INFO Uploading dynamodb transaction template to the S3 template bucket. a206296-tr-ihn-sandbox-us-east-1-source
+2025-07-16 23:06:25,615 cloudiac.cloudformation INFO Stack with name a206296-iac-transaction-dynamo already found. Performing update...
+2025-07-16 23:06:26,342 cloudiac.cloudformation INFO Waiting for stack a206296-iac-transaction-dynamo to update ...
+2025-07-16 23:06:59,317 cloudiac.cloudformation INFO a206296-iac-transaction-dynamo Cloudformation stack updated successfully
+2025-07-16 23:06:59,319 cloudiac.cloudformation INFO Uploading pipeline template to S3 template bucket: a206296-tr-ihn-sandbox-us-east-1-source
+2025-07-16 23:09:59,568 cloudiac.cloudformation INFO Stack with name a206296-s3-iamroledeployment-temp-iac-pipeline not found. Creating new stack...
+2025-07-16 23:10:00,373 cloudiac.cloudformation INFO Waiting for stack a206296-s3-iamroledeployment-temp-iac-pipeline to complete ...
+2025-07-16 23:11:51,091 cloudiac ERROR Stack waiter error. Details below:
+Stack name: a206296-s3-iamroledeployment-temp-iac-pipeline
+Stack id: arn:aws:cloudformation:eu-west-1:496598440491:stack/a206296-s3-iamroledeployment-temp-iac-pipeline/e60c8bd0-626b-11f0-88c7-02fc3da6da8f
+Stack status: ROLLBACK_COMPLETE
+Stack status reason: No status reason was given
+Failure events since the last operation began:

@@ -1,0 +1,87 @@
+{
+ "AWSTemplateFormatVersion": "2010-09-09",
+ "Description": "a206296-s3-iamroledeployment-temp Iac project inventory bucket",
+ "Resources": {
+  "InventoryBucket": {
+   "Properties": {
+    "BucketEncryption": {
+     "ServerSideEncryptionConfiguration": [
+      {
+       "ServerSideEncryptionByDefault": {
+        "SSEAlgorithm": "AES256"
+       }
+      }
+     ]
+    },
+    "BucketName": "a206296-496598440491-euw1-iac-shared-bucket",
+    "LifecycleConfiguration": {
+     "Rules": [
+      {
+       "AbortIncompleteMultipartUpload": {
+        "DaysAfterInitiation": 7
+       },
+       "ExpirationInDays": 186,
+       "Id": "BucketLifecycleRule",
+       "NoncurrentVersionExpirationInDays": 186,
+       "Status": "Enabled"
+      }
+     ]
+    },
+    "Tags": [
+     {
+      "Key": "tr:application-asset-insight-id",
+      "Value": "206296"
+     },
+     {
+      "Key": "tr:resource-owner",
+      "Value": "sakshi.kendre@thomsonreuters.com"
+     }
+    ],
+    "VersioningConfiguration": {
+     "Status": "Enabled"
+    }
+   },
+   "Type": "AWS::S3::Bucket"
+  },
+  "InventoryBucketPolicy": {
+   "Properties": {
+    "Bucket": {
+     "Ref": "InventoryBucket"
+    },
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "s3:GetBucketLocation",
+        "s3:ListBucket"
+       ],
+       "Effect": "Allow",
+       "Principal": {
+        "AWS": [
+         "arn:aws:iam::496598440491:root"
+        ]
+       },
+       "Resource": "arn:aws:s3:::a206296-496598440491-euw1-iac-shared-bucket",
+       "Sid": "GetListBucketPermissions"
+      },
+      {
+       "Action": [
+        "s3:GetObject",
+        "s3:PutObject"
+       ],
+       "Effect": "Allow",
+       "Principal": {
+        "AWS": [
+         "arn:aws:iam::496598440491:root"
+        ]
+       },
+       "Resource": "arn:aws:s3:::a206296-496598440491-euw1-iac-shared-bucket/*",
+       "Sid": "GetObjPermissions"
+      }
+     ]
+    }
+   },
+   "Type": "AWS::S3::BucketPolicy"
+  }
+ }
+}
