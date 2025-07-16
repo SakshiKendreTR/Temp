@@ -1,0 +1,27 @@
+project_seed:
+  accounts:
+  - '496598440491'
+  asset_insight_id: '206296'
+  resource_owner: sakshi.kendre@thomsonreuters.com
+  project_name: temp
+  service_name: s3-iamroledeployment
+  source_bucket: a206296-tr-ihn-sandbox-us-east-1-source
+  github_repo: SakshiKendreTR/Temp
+  github_owner: SakshiKendreTR
+  github_branch: main
+  archive_name: Temp-s3-iamrole/iac/dev/dryrun/archive.zip
+  template_bucket_name: a206296-tr-ihn-sandbox-us-east-1-source
+  template_key_prefix: Temp-s3-iamrole/template
+  deployment_engine_version: 3.2.16
+  region: us-east-1
+  log_retention: 90
+  environments:
+  - name: dev
+    environment_type: DEVELOPMENT
+    iam_role: arn:aws:iam::496598440491:role/human-role/a206296-PowerUser2
+    notification_emails:
+    - sakshi.kendre@thomsonreuters.com
+    stages:
+    - name: s3
+      type: cloudformation
+    dryrun_enabled: true
