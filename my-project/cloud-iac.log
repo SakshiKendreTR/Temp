@@ -284,3 +284,5 @@ Traceback (most recent call last):
     os.makedirs(Init.SCRIPT_DIRECTORY)
   File "<frozen os>", line 225, in makedirs
 FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'scripts'
+2025-07-17 13:57:16,051 cloudiac.cloudiac ERROR Checking action.. init
+2025-07-17 13:57:16,086 cloudiac.initialize INFO Project created successfully

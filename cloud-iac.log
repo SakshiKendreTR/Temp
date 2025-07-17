@@ -30,3 +30,18 @@ Traceback (most recent call last):
   File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Lib\site-packages\cloudiaccommon\validate.py", line 324, in _read_config
     raise IOError(error_msg.format(filepath))
 OSError: Could not find root config.yaml file. (config\config.yaml) Please ensure you are running from the root of the project
+2025-07-17 13:53:05,102 cloudiac.cloudiac ERROR Checking action.. init
+2025-07-17 13:53:05,102 cloudiac ERROR Last chance exception caught.
+2025-07-17 13:53:05,102 cloudiac ERROR 2
+Traceback (most recent call last):
+  File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Scripts\cloud-iac", line 60, in <module>
+    CloudIac().main()
+  File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Lib\site-packages\cloudiac\cloudiac.py", line 149, in main
+    Init().init_project()
+  File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Lib\site-packages\cloudiac\initialize.py", line 243, in init_project
+    config = self.read_in_yaml_project_seed()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Lib\site-packages\cloudiac\initialize.py", line 42, in read_in_yaml_project_seed
+    with open(self.PROJECT_SEED_FILE_NAME, 'r') as stream:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'project_seed.yaml'

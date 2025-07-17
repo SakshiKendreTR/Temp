@@ -1,0 +1,10 @@
+template_path: templates/s3bucket.yaml
+
+parameters:
+  AssetId: "a206296"
+  ServiceName: "sample"
+  Environment: "dev"
+stack_tags:
+  tr:application-asset-insight-id: 206296
+  tr:environment-type: DEVELOPMENT
+  tr:resource-owner: sakshi.kendre@thomsonreuters.com

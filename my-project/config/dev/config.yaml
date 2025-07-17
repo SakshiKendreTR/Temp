@@ -1,0 +1,7 @@
+dryrun_enabled: true
+environment_type: DEVELOPMENT
+iam_role: arn:aws:iam::496598440491:role/human-role/a206296-PowerUser2
+notification_emails:
+- sakshi.kendre@thomsonreuters.com
+stage_order:
+- s3
