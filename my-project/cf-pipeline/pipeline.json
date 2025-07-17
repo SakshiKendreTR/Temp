@@ -124,7 +124,7 @@
       "Value": "s3-deployment"
      }
     ],
-    "VpcId": "vpc-0277753f3db5ba797"
+    "VpcId": "vpc-0c0775ef09acee2e3"
    },
    "Type": "AWS::EC2::SecurityGroup"
   },
@@ -163,7 +163,7 @@
        }
       }
      ],
-     "Image": "460300312212.dkr.ecr.us-east-1.amazonaws.com/a204503/cloud-iac:3.2.16",
+     "Image": "460300312212.dkr.ecr.eu-west-1.amazonaws.com/a204503/cloud-iac:3.2.16",
      "ImagePullCredentialsType": "SERVICE_ROLE",
      "Type": "LINUX_CONTAINER"
     },
@@ -210,10 +210,10 @@
       }
      ],
      "Subnets": [
-      "subnet-00835d846fccfa061",
-      "subnet-00a203012b7bf67ab"
+      "subnet-07262b54f7daba454",
+      "subnet-0aaffdad5a67a0cec"
      ],
-     "VpcId": "vpc-0277753f3db5ba797"
+     "VpcId": "vpc-0c0775ef09acee2e3"
     }
    },
    "Type": "AWS::CodeBuild::Project"
@@ -235,7 +235,7 @@
        }
       }
      ],
-     "Image": "460300312212.dkr.ecr.us-east-1.amazonaws.com/a204503/cloud-iac:3.2.16",
+     "Image": "460300312212.dkr.ecr.eu-west-1.amazonaws.com/a204503/cloud-iac:3.2.16",
      "ImagePullCredentialsType": "SERVICE_ROLE",
      "Type": "LINUX_CONTAINER"
     },
@@ -282,10 +282,10 @@
       }
      ],
      "Subnets": [
-      "subnet-00835d846fccfa061",
-      "subnet-00a203012b7bf67ab"
+      "subnet-07262b54f7daba454",
+      "subnet-0aaffdad5a67a0cec"
      ],
-     "VpcId": "vpc-0277753f3db5ba797"
+     "VpcId": "vpc-0c0775ef09acee2e3"
     }
    },
    "Type": "AWS::CodeBuild::Project"
@@ -293,7 +293,7 @@
   "CPdevdryrun": {
    "Properties": {
     "ArtifactStore": {
-     "Location": "a206296-586370897882-use1-iac-shared-bucket",
+     "Location": "a206296-586370897882-euw1-iac-shared-bucket",
      "Type": "S3"
     },
     "Name": "a206296-s3-deployment-temp-iac-dev-dryrun",
@@ -365,7 +365,7 @@
   "CPdevexecute": {
    "Properties": {
     "ArtifactStore": {
-     "Location": "a206296-586370897882-use1-iac-shared-bucket",
+     "Location": "a206296-586370897882-euw1-iac-shared-bucket",
      "Type": "S3"
     },
     "Name": "a206296-s3-deployment-temp-iac-dev-execute",
@@ -528,7 +528,7 @@
             "",
             [
              "arn:aws:s3:::",
-             "a206296-586370897882-use1-iac-shared-bucket"
+             "a206296-586370897882-euw1-iac-shared-bucket"
             ]
            ]
           },
@@ -537,7 +537,7 @@
             "",
             [
              "arn:aws:s3:::",
-             "a206296-586370897882-use1-iac-shared-bucket",
+             "a206296-586370897882-euw1-iac-shared-bucket",
              "/*"
             ]
            ]
@@ -551,8 +551,8 @@
          ],
          "Effect": "Allow",
          "Resource": [
-          "arn:aws:codebuild:us-east-1:586370897882:project/a206296-s3-deployment-temp-iac-dev-dryrun",
-          "arn:aws:codebuild:us-east-1:586370897882:project/a206296-s3-deployment-temp-iac-dev-execute"
+          "arn:aws:codebuild:eu-west-1:586370897882:project/a206296-s3-deployment-temp-iac-dev-dryrun",
+          "arn:aws:codebuild:eu-west-1:586370897882:project/a206296-s3-deployment-temp-iac-dev-execute"
          ],
          "Sid": "AllowCodeBuildAccess"
         },
@@ -692,8 +692,8 @@
          ],
          "Effect": "Allow",
          "Resource": [
-          "arn:aws:codepipeline:us-east-1:586370897882:a206296-s3-deployment-temp-iac-dev-dryrun",
-          "arn:aws:codepipeline:us-east-1:586370897882:a206296-s3-deployment-temp-iac-dev-execute"
+          "arn:aws:codepipeline:eu-west-1:586370897882:a206296-s3-deployment-temp-iac-dev-dryrun",
+          "arn:aws:codepipeline:eu-west-1:586370897882:a206296-s3-deployment-temp-iac-dev-execute"
          ],
          "Sid": "AllowCodePipelineExeAccess"
         }
@@ -753,7 +753,7 @@
          ],
          "Effect": "Allow",
          "Resource": [
-          "arn:aws:logs:us-east-1:586370897882:log-group:/aws/lambda/a206296-s3-deployment-temp-iac-approval:*"
+          "arn:aws:logs:eu-west-1:586370897882:log-group:/aws/lambda/a206296-s3-deployment-temp-iac-approval:*"
          ],
          "Sid": "WriteLogsToCloudWatch"
         },
@@ -787,7 +787,7 @@
            "Fn::Join": [
             "",
             [
-             "arn:aws:s3:::a206296-586370897882-use1-iac-shared-bucket",
+             "arn:aws:s3:::a206296-586370897882-euw1-iac-shared-bucket",
              "/*"
             ]
            ]
@@ -802,7 +802,7 @@
          ],
          "Effect": "Allow",
          "Resource": [
-          "arn:aws:s3:::a206296-586370897882-use1-iac-shared-bucket",
+          "arn:aws:s3:::a206296-586370897882-euw1-iac-shared-bucket",
           {
            "Fn::Join": [
             "",
@@ -1045,7 +1045,7 @@
     "State": "ENABLED",
     "Targets": [
      {
-      "Arn": "arn:aws:codepipeline:us-east-1:586370897882:a206296-s3-deployment-temp-iac-dev-execute",
+      "Arn": "arn:aws:codepipeline:eu-west-1:586370897882:a206296-s3-deployment-temp-iac-dev-execute",
       "Id": "a206296-s3-deployment-temp-devexe",
       "RoleArn": {
        "Fn::GetAtt": [
@@ -1093,7 +1093,7 @@
        "InputPathsMap": {
         "pipeline": "$.detail.pipeline"
        },
-       "InputTemplate": "\"The Pipeline <pipeline> has failed. More informaiton can be found at https://console.aws.amazon.com/codepipeline/home?region=us-east-1#/view/<pipeline>\""
+       "InputTemplate": "\"The Pipeline <pipeline> has failed. More informaiton can be found at https://console.aws.amazon.com/codepipeline/home?region=eu-west-1#/view/<pipeline>\""
       }
      }
     ]

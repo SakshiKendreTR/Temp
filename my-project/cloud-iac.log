@@ -300,3 +300,10 @@ This feature automatically deletes Cloudformation stacks that have been removed 
 	auto_delete: true
 
 2025-07-17 14:11:26,320 cloudiac.deploy INFO DRYRUN enabled. Not deploying pipelines. Check your local folder to see the new templates
+2025-07-17 14:15:21,961 cloudiac.cloudiac ERROR Checking action.. deploy-pipeline
+2025-07-17 14:15:28,138 cloudiac.deploy WARNING ----- Please enable the 'auto_delete' option -----
+This feature automatically deletes Cloudformation stacks that have been removed from your local directory. Once you are sure that this won't cause any accidental deletion of aws resources, enable this feature by adding the following line to your root config file: 
+
+	auto_delete: true
+
+2025-07-17 14:15:33,638 cloudiac.deploy INFO DRYRUN enabled. Not deploying pipelines. Check your local folder to see the new templates
