@@ -272,3 +272,15 @@ Traceback (most recent call last):
     os.makedirs(CONFIG_DIRECTORY)
   File "<frozen os>", line 225, in makedirs
 FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'config'
+2025-07-17 13:56:09,420 cloudiac.cloudiac ERROR Checking action.. init
+2025-07-17 13:56:09,435 cloudiac ERROR Last chance exception caught.
+2025-07-17 13:56:09,435 cloudiac ERROR 17
+Traceback (most recent call last):
+  File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Scripts\cloud-iac", line 60, in <module>
+    CloudIac().main()
+  File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Lib\site-packages\cloudiac\cloudiac.py", line 149, in main
+    Init().init_project()
+  File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Lib\site-packages\cloudiac\initialize.py", line 263, in init_project
+    os.makedirs(Init.SCRIPT_DIRECTORY)
+  File "<frozen os>", line 225, in makedirs
+FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'scripts'
