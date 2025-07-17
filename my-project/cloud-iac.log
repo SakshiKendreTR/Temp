@@ -89,3 +89,172 @@ Stack id: arn:aws:cloudformation:eu-west-1:496598440491:stack/a206296-s3-iamrole
 Stack status: ROLLBACK_COMPLETE
 Stack status reason: No status reason was given
 Failure events since the last operation began:
+2025-07-16 23:14:40,746 cloudiac.cloudiac ERROR Checking action.. deploy-pipeline
+2025-07-16 23:14:47,103 cloudiac.deploy WARNING ----- Please enable the 'auto_delete' option -----
+This feature automatically deletes Cloudformation stacks that have been removed from your local directory. Once you are sure that this won't cause any accidental deletion of aws resources, enable this feature by adding the following line to your root config file: 
+
+	auto_delete: true
+
+2025-07-16 23:14:52,513 cloudiac.deploy INFO DRYRUN enabled. Not deploying pipelines. Check your local folder to see the new templates
+2025-07-16 23:15:08,332 cloudiac.cloudiac ERROR Checking action.. deploy-pipeline
+2025-07-16 23:15:14,161 cloudiac.deploy WARNING ----- Please enable the 'auto_delete' option -----
+This feature automatically deletes Cloudformation stacks that have been removed from your local directory. Once you are sure that this won't cause any accidental deletion of aws resources, enable this feature by adding the following line to your root config file: 
+
+	auto_delete: true
+
+2025-07-16 23:15:19,633 cloudiac.deploy INFO Deploying IaC pipelines
+2025-07-16 23:15:21,731 cloudiac.cloudformation INFO Checking to see if the source bucket exists..
+2025-07-16 23:15:22,453 cloudiac.cloudformation INFO Bucket found. Exiting source bucket deployment...
+2025-07-16 23:15:22,468 cloudiac.cloudformation INFO Checking to see if the inventory bucket: a206296-496598440491-euw1-iac-shared-bucket exists..
+2025-07-16 23:15:23,223 cloudiac.cloudformation INFO The inventory bucket defined in config/config.yaml doesn't exist.
+2025-07-16 23:15:23,225 cloudiac.cloudformation INFO Checking to see if a stack named a206296-iac-inventory-bucket exists...
+2025-07-16 23:15:24,366 cloudiac.cloudformation INFO Stack not found.
+2025-07-16 23:15:24,366 cloudiac.cloudformation INFO Launching a new inventory bucket stack with name a206296-iac-inventory-bucket...
+2025-07-16 23:15:24,771 cloudiac.cloudformation INFO Waiting for stack a206296-iac-inventory-bucket to complete ...
+2025-07-16 23:15:46,989 cloudiac.cloudformation INFO a206296-iac-inventory-bucket Cloudformation stack created successfully
+2025-07-16 23:15:46,989 cloudiac.deploy INFO Attempting to enable data events in CloudTrail for your source bucket.
+2025-07-16 23:15:46,989 cloudiac.deploy INFO This is a step which is required for pipelines to trigger automatically.
+2025-07-16 23:15:47,932 cloudiac.deploy INFO Data events are already enabled!
+2025-07-16 23:15:47,945 cloudiac.cloudformation INFO Uploading dynamodb transaction template to the S3 template bucket. a206296-tr-ihn-sandbox-us-east-1-source
+2025-07-16 23:15:49,115 cloudiac.cloudformation INFO Stack with name a206296-iac-transaction-dynamo already found. Performing update...
+2025-07-16 23:15:49,755 cloudiac.cloudformation INFO No updates to perform on a206296-iac-transaction-dynamo
+2025-07-16 23:15:49,755 cloudiac.cloudformation INFO Uploading pipeline template to S3 template bucket: a206296-tr-ihn-sandbox-us-east-1-source
+2025-07-16 23:17:01,598 cloudiac.cloudformation INFO Stack with name a206296-s3-iamroledeployment-temp-iac-pipeline not found. Creating new stack...
+2025-07-16 23:17:02,316 cloudiac.cloudformation INFO Waiting for stack a206296-s3-iamroledeployment-temp-iac-pipeline to complete ...
+2025-07-16 23:19:03,286 cloudiac ERROR Stack waiter error. Details below:
+Stack name: a206296-s3-iamroledeployment-temp-iac-pipeline
+Stack id: arn:aws:cloudformation:eu-west-1:496598440491:stack/a206296-s3-iamroledeployment-temp-iac-pipeline/e19bcec0-626c-11f0-af0d-0678fddd1e67
+Stack status: ROLLBACK_COMPLETE
+Stack status reason: No status reason was given
+Failure events since the last operation began:
+2025-07-17 13:13:39,562 cloudiac.cloudiac ERROR Checking action.. deploy-pipeline
+2025-07-17 13:13:45,972 cloudiac.deploy WARNING ----- Please enable the 'auto_delete' option -----
+This feature automatically deletes Cloudformation stacks that have been removed from your local directory. Once you are sure that this won't cause any accidental deletion of aws resources, enable this feature by adding the following line to your root config file: 
+
+	auto_delete: true
+
+2025-07-17 13:13:51,461 cloudiac.deploy INFO DRYRUN enabled. Not deploying pipelines. Check your local folder to see the new templates
+2025-07-17 13:15:55,030 cloudiac.cloudiac ERROR Checking action.. deploy-pipeline
+2025-07-17 13:16:01,262 cloudiac.deploy WARNING ----- Please enable the 'auto_delete' option -----
+This feature automatically deletes Cloudformation stacks that have been removed from your local directory. Once you are sure that this won't cause any accidental deletion of aws resources, enable this feature by adding the following line to your root config file: 
+
+	auto_delete: true
+
+2025-07-17 13:16:06,938 cloudiac.deploy INFO Deploying IaC pipelines
+2025-07-17 13:16:09,237 cloudiac.cloudformation INFO Checking to see if the source bucket exists..
+2025-07-17 13:16:10,053 cloudiac.cloudformation INFO Bucket found. Exiting source bucket deployment...
+2025-07-17 13:16:10,059 cloudiac.cloudformation INFO Checking to see if the inventory bucket: a206296-496598440491-euw1-iac-shared-bucket exists..
+2025-07-17 13:16:10,866 cloudiac.cloudformation INFO Bucket found. Exiting inventory bucket deployment...
+2025-07-17 13:16:10,866 cloudiac.deploy INFO Attempting to enable data events in CloudTrail for your source bucket.
+2025-07-17 13:16:10,866 cloudiac.deploy INFO This is a step which is required for pipelines to trigger automatically.
+2025-07-17 13:16:11,899 cloudiac.deploy INFO Data events are already enabled!
+2025-07-17 13:16:11,899 cloudiac.cloudformation INFO Uploading dynamodb transaction template to the S3 template bucket. a206296-tr-ihn-sandbox-us-east-1-source
+2025-07-17 13:16:13,268 cloudiac.cloudformation INFO Stack with name a206296-iac-transaction-dynamo already found. Performing update...
+2025-07-17 13:16:13,638 cloudiac.cloudformation INFO No updates to perform on a206296-iac-transaction-dynamo
+2025-07-17 13:16:13,638 cloudiac.cloudformation INFO Uploading pipeline template to S3 template bucket: a206296-tr-ihn-sandbox-us-east-1-source
+2025-07-17 13:18:09,130 cloudiac.cloudformation INFO Stack with name a206296-s3-iamroledeployment-temp-iac-pipeline not found. Creating new stack...
+2025-07-17 13:18:09,697 cloudiac.cloudformation INFO Waiting for stack a206296-s3-iamroledeployment-temp-iac-pipeline to complete ...
+2025-07-17 13:19:59,986 cloudiac ERROR Stack waiter error. Details below:
+Stack name: a206296-s3-iamroledeployment-temp-iac-pipeline
+Stack id: arn:aws:cloudformation:eu-west-1:496598440491:stack/a206296-s3-iamroledeployment-temp-iac-pipeline/623644a0-62e2-11f0-938a-022dcdeee193
+Stack status: ROLLBACK_COMPLETE
+Stack status reason: No status reason was given
+Failure events since the last operation began:
+2025-07-17 13:22:31,917 cloudiac.cloudiac ERROR Checking action.. deploy-pipeline
+2025-07-17 13:22:33,373 cloudiac ERROR Last chance exception caught.
+2025-07-17 13:22:33,374 cloudiac ERROR An error occurred (ExpiredToken) when calling the GetCallerIdentity operation: The security token included in the request is expired
+Traceback (most recent call last):
+  File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Scripts\cloud-iac", line 60, in <module>
+    CloudIac().main()
+  File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Lib\site-packages\cloudiac\cloudiac.py", line 73, in main
+    Deploy(session).generate_iac_infrastructure(args.dryrun)
+  File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Lib\site-packages\cloudiac\deploy.py", line 40, in generate_iac_infrastructure
+    ValidateUser(self.session).validate_user_asset_id(root_config['asset_insight_id'])
+  File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Lib\site-packages\cloudiac\validate.py", line 24, in validate_user_asset_id
+    user_arn = self.session.client('sts').get_caller_identity().get('Arn')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Lib\site-packages\cloudiac\dependencies\botocore\client.py", line 357, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Lib\site-packages\cloudiac\dependencies\botocore\client.py", line 676, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ExpiredToken) when calling the GetCallerIdentity operation: The security token included in the request is expired
+2025-07-17 13:24:06,021 cloudiac.cloudiac ERROR Checking action.. deploy-pipeline
+2025-07-17 13:24:11,714 cloudiac.deploy WARNING ----- Please enable the 'auto_delete' option -----
+This feature automatically deletes Cloudformation stacks that have been removed from your local directory. Once you are sure that this won't cause any accidental deletion of aws resources, enable this feature by adding the following line to your root config file: 
+
+	auto_delete: true
+
+2025-07-17 13:24:18,687 cloudiac ERROR Last chance exception caught.
+2025-07-17 13:24:18,688 cloudiac ERROR An error occurred (403) when calling the HeadBucket operation: Forbidden
+Traceback (most recent call last):
+  File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Scripts\cloud-iac", line 60, in <module>
+    CloudIac().main()
+  File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Lib\site-packages\cloudiac\cloudiac.py", line 73, in main
+    Deploy(session).generate_iac_infrastructure(args.dryrun)
+  File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Lib\site-packages\cloudiac\deploy.py", line 79, in generate_iac_infrastructure
+    iac_pipeline.create_ci_cd_pipelines(needs_pat, auto_delete)
+  File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Lib\site-packages\cloudiac\iacpipeline.py", line 1733, in create_ci_cd_pipelines
+    raise e
+  File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Lib\site-packages\cloudiac\iacpipeline.py", line 1725, in create_ci_cd_pipelines
+    s3_client.head_bucket(
+  File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Lib\site-packages\cloudiac\dependencies\botocore\client.py", line 357, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Lib\site-packages\cloudiac\dependencies\botocore\client.py", line 676, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (403) when calling the HeadBucket operation: Forbidden
+2025-07-17 13:25:46,735 cloudiac.cloudiac ERROR Checking action.. deploy-pipeline
+2025-07-17 13:25:52,517 cloudiac.deploy WARNING ----- Please enable the 'auto_delete' option -----
+This feature automatically deletes Cloudformation stacks that have been removed from your local directory. Once you are sure that this won't cause any accidental deletion of aws resources, enable this feature by adding the following line to your root config file: 
+
+	auto_delete: true
+
+2025-07-17 13:25:59,547 cloudiac.deploy INFO Deploying IaC pipelines
+2025-07-17 13:26:02,381 cloudiac.cloudformation INFO Checking to see if the source bucket exists..
+2025-07-17 13:26:03,917 cloudiac.cloudformation INFO The bucket was found, but we couldn't read from it.
+2025-07-17 13:26:03,923 cloudiac.cloudformation ERROR Bucket with name a206296-tr-ihn-sandbox-us-east-1-source exists. However, you do not have permission to access it. This might indicate that the bucket already exists and is in use in a different account. The correct fix is probably to choose a different source bucket name. 
+2025-07-17 13:26:03,925 cloudiac ERROR Bucket with name a206296-tr-ihn-sandbox-us-east-1-source exists. However, you do not have permission to access it. This might indicate that the bucket already exists and is in use in a different account. The correct fix is probably to choose a different source bucket name. 
+2025-07-17 13:32:32,250 cloudiac.cloudiac ERROR Checking action.. deploy-pipeline
+2025-07-17 13:32:38,123 cloudiac.deploy WARNING ----- Please enable the 'auto_delete' option -----
+This feature automatically deletes Cloudformation stacks that have been removed from your local directory. Once you are sure that this won't cause any accidental deletion of aws resources, enable this feature by adding the following line to your root config file: 
+
+	auto_delete: true
+
+2025-07-17 13:32:45,860 cloudiac.deploy INFO Deploying IaC pipelines
+2025-07-17 13:32:48,334 cloudiac.cloudformation INFO Checking to see if the source bucket exists..
+2025-07-17 13:32:48,951 cloudiac.cloudformation INFO The source bucket defined in config/config.yaml doesn't exist.
+2025-07-17 13:32:48,952 cloudiac.cloudformation INFO Checking to see if a stack named a206296-iac-source-bucket exists...
+2025-07-17 13:32:50,302 cloudiac.cloudformation INFO Stack found. Updating...
+2025-07-17 13:32:50,833 cloudiac.cloudformation INFO Waiting for stack a206296-iac-source-bucket to update ...
+2025-07-17 13:38:18,845 cloudiac ERROR Stack waiter error. Details below:
+Stack name: a206296-iac-source-bucket
+Stack id: arn:aws:cloudformation:us-east-1:586370897882:stack/a206296-iac-source-bucket/fa5d20a0-872d-11ef-9d62-0afffe74e8ab
+Stack status: UPDATE_ROLLBACK_COMPLETE
+Stack status reason: No status reason was given
+Failure events since the last operation began:
+2025-07-17 13:41:13,426 cloudiac.cloudiac ERROR Checking action.. deploy-pipeline
+2025-07-17 13:41:19,689 cloudiac.deploy WARNING ----- Please enable the 'auto_delete' option -----
+This feature automatically deletes Cloudformation stacks that have been removed from your local directory. Once you are sure that this won't cause any accidental deletion of aws resources, enable this feature by adding the following line to your root config file: 
+
+	auto_delete: true
+
+2025-07-17 13:41:27,633 cloudiac.deploy INFO DRYRUN enabled. Not deploying pipelines. Check your local folder to see the new templates
+2025-07-17 13:41:54,775 cloudiac.cloudiac ERROR Checking action.. deploy-pipeline
+2025-07-17 13:42:00,701 cloudiac.deploy WARNING ----- Please enable the 'auto_delete' option -----
+This feature automatically deletes Cloudformation stacks that have been removed from your local directory. Once you are sure that this won't cause any accidental deletion of aws resources, enable this feature by adding the following line to your root config file: 
+
+	auto_delete: true
+
+2025-07-17 13:42:07,374 cloudiac.deploy INFO Deploying IaC pipelines
+2025-07-17 13:42:09,872 cloudiac.cloudformation INFO Checking to see if the source bucket exists..
+2025-07-17 13:42:10,716 cloudiac.cloudformation INFO The source bucket defined in config/config.yaml doesn't exist.
+2025-07-17 13:42:10,716 cloudiac.cloudformation INFO Checking to see if a stack named a206296-iac-source-bucket exists...
+2025-07-17 13:42:11,986 cloudiac.cloudformation INFO Stack found. Updating...
+2025-07-17 13:42:12,480 cloudiac.cloudformation INFO Waiting for stack a206296-iac-source-bucket to update ...
+2025-07-17 13:47:40,247 cloudiac ERROR Stack waiter error. Details below:
+Stack name: a206296-iac-source-bucket
+Stack id: arn:aws:cloudformation:us-east-1:586370897882:stack/a206296-iac-source-bucket/fa5d20a0-872d-11ef-9d62-0afffe74e8ab
+Stack status: UPDATE_ROLLBACK_COMPLETE
+Stack status reason: No status reason was given
+Failure events since the last operation began:

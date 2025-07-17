@@ -4,14 +4,14 @@ project_seed:
   asset_insight_id: '206296'
   resource_owner: sakshi.kendre@thomsonreuters.com
   project_name: temp
-  service_name: s3-iamroledeployment
+  service_name: s3-deployment
   source_bucket: a206296-tr-ihn-sandbox-us-east-1-source
   github_repo: SakshiKendreTR/Temp
   github_owner: SakshiKendreTR
   github_branch: main
-  archive_name: Temp-s3-iamrole/iac/dev/dryrun/archive.zip
+  archive_name: Temp-s3/iac/dev/dryrun/archive.zip
   template_bucket_name: a206296-tr-ihn-sandbox-us-east-1-source
-  template_key_prefix: Temp-s3-iamrole/template
+  template_key_prefix: Temp-s3/template
   deployment_engine_version: 3.2.16
   region: us-east-1
   log_retention: 90
