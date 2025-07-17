@@ -258,3 +258,17 @@ Stack id: arn:aws:cloudformation:us-east-1:586370897882:stack/a206296-iac-source
 Stack status: UPDATE_ROLLBACK_COMPLETE
 Stack status reason: No status reason was given
 Failure events since the last operation began:
+2025-07-17 13:53:17,273 cloudiac.cloudiac ERROR Checking action.. init
+2025-07-17 13:53:17,315 cloudiac ERROR Last chance exception caught.
+2025-07-17 13:53:17,315 cloudiac ERROR 17
+Traceback (most recent call last):
+  File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Scripts\cloud-iac", line 60, in <module>
+    CloudIac().main()
+  File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Lib\site-packages\cloudiac\cloudiac.py", line 149, in main
+    Init().init_project()
+  File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Lib\site-packages\cloudiac\initialize.py", line 259, in init_project
+    self.__write_config(project_seed)
+  File "C:\Users\6136138\AppData\Local\Programs\Python\Python311\Lib\site-packages\cloudiac\initialize.py", line 221, in __write_config
+    os.makedirs(CONFIG_DIRECTORY)
+  File "<frozen os>", line 225, in makedirs
+FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'config'

@@ -1,3 +1,0 @@
-dryrun: "python3 scripts/artifacttoken.py && npm config fix && npm ci && npm run build && npm -g uninstall aws-cdk && npm -g install aws-cdk && cdk --version"
-execute: "python3 scripts/artifacttoken.py && npm config fix && npm ci && npm run build && npm -g uninstall aws-cdk && npm -g install aws-cdk && cdk --version"
-assume_role_disable: true # The Artifactory token is in the CICD account, let's not assume a role
