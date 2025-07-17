@@ -2,7 +2,7 @@ template_path: templates/s3bucket.yaml
 
 parameters:
   AssetId: "a206296"
-  ServiceName: "sample"
+  ServiceName: "test"
   Environment: "dev"
 stack_tags:
   tr:application-asset-insight-id: 206296

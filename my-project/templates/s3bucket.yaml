@@ -24,7 +24,7 @@ Resources:
           Value: DEVELOPMENT
         -
           Key: "service-name"
-          Value: sample
+          Value: test
       VersioningConfiguration:
         Status: Enabled
 
