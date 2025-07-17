@@ -609,7 +609,7 @@
       "PolicyName": "CodePipelineAccessPolicy"
      }
     ],
-    "RoleName": "a206296-s3-iamroledeployment-temp-iac-pipeline"
+    /*"RoleName": "a206296-s3-iamroledeployment-temp-iac-pipeline"*/
    },
    "Type": "AWS::IAM::Role"
   },
